@@ -38,6 +38,7 @@ function clear() {
   filled = [];
   player.innerHTML = "player 1";
   win1 = false;
+  win2 = false;
   for (var j = 0; j < div.length; j++) {
     div[j].innerHTML = "";
   }
@@ -82,9 +83,9 @@ function game() {
 
 computer.onclick = function() {
   clear()
-  // for(var i = 0; i < div.length; i++){
-  //   div[i].removeEventListener('click', fill);
-  // }
+  for(var i = 0; i < div.length; i++){
+    div[i].removeEventListener('click', fill, false);
+  }
   TwoPlayer.setAttribute("checked", false);
   computer.setAttribute("checked", true);
 }
