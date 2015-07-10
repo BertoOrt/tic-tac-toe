@@ -2,6 +2,10 @@ extends layout
 
 block content
   h1 Tic Tac Toe!
+  |Two Player
+  input(type="radio", id="TwoPlayer", name="gameOption")
+  |Computer
+  input(type="radio", id="computer", name="gameOption", checked)
   .label
     .turn
       span Turn: 
@@ -17,3 +21,5 @@ block content
     .cell#seven
     .cell#eight
     .cell#nine
+  script(src='javascripts/computer.js')
+  script(src='javascripts/TwoPlayer.js')
